@@ -264,6 +264,10 @@ public class AsyncHttpClient {
      *
      */
     public void setBasicAuth( String user, String pass, AuthScope scope){
+        if (user == null && pass == null) {
+            this.httpClient.getCredentialsProvider().clear();
+            return;
+        }
         UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(user,pass);
         this.httpClient.getCredentialsProvider().setCredentials(scope, credentials);
     }
