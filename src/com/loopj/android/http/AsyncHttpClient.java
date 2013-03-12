@@ -243,6 +243,14 @@ public class AsyncHttpClient {
     public void addHeader(String header, String value) {
         clientHeaderMap.put(header, value);
     }
+    
+    /**
+     * Gets the value for header attached to all requests.
+     * @param header the name of the header
+     */
+    public String getValueForHeader(String header) {
+    	return clientHeaderMap.get(header);
+    }
 
     /**
      * Sets basic authentication for the request. Uses AuthScope.ANY. This is the same as
