@@ -217,7 +217,7 @@ public class AsyncHttpResponseHandler {
     }
 
     // Interface to AsyncHttpRequest
-    public void sendResponseMessage(HttpResponse response) {
+    void sendResponseMessage(HttpResponse response) {
         StatusLine status = response.getStatusLine();
         String responseBody = null;
         try {
