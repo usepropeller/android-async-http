@@ -64,7 +64,7 @@ public class FileAsyncHttpResponseHandler 		extends AsyncHttpResponseHandler {
     }
     
 	@Override
-    void sendResponseMessage(HttpResponse response) {
+    public void sendResponseMessage(HttpResponse response) {
         StatusLine status = response.getStatusLine();
         
         try {
